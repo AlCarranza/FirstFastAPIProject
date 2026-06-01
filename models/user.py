@@ -2,6 +2,12 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
 
+fake_user_db = {
+    "alex": {
+        "username": "alex",
+        "password": "secret"
+    }
+}
 
 class UserCreate(BaseModel):
     name: str = Field(min_length=2)
